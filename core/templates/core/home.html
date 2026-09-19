@@ -1,16 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Management System</title>
-</head>
+{% extends "base.html" %}
 
-<body>
 
-    <h1>School Management System</h1>
+{% block title %}
+Dashboard
+{% endblock title %}
 
-    <p>Welcome to our school management system.</p>
 
-</body>
-</html>
+{% block content %}
+
+<div>
+
+    <!-- Page Header -->
+
+    <div class="mb-8">
+
+        <h1 class="text-3xl font-bold text-gray-900">
+            Dashboard
+        </h1>
+
+        <p class="text-gray-500 mt-2">
+            Welcome to your school management dashboard.
+        </p>
+
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+        <!-- Students -->
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+
+            <p class="text-sm text-gray-500">
+                Total Students
+            </p>
+
+            <h2 class="text-3xl font-bold mt-2">
+                250
+            </h2>
+
+            <p class="text-sm text-green-600 mt-2">
+                +12 this month
+            </p>
+
+        </div>
+
+
+        <!-- Teachers -->
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+
+            <p class="text-sm text-gray-500">
+                Total Teachers
+            </p>
+
+            <h2 class="text-3xl font-bold mt-2">
+                25
+            </h2>
+
+            <p class="text-sm text-green-600 mt-2">
+                +2 this month
+            </p>
+
+        </div>
+
+
+        <!-- Classes -->
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+
+            <p class="text-sm text-gray-500">
+                Total Classes
+            </p>
+
+            <h2 class="text-3xl font-bold mt-2">
+                12
+            </h2>
+
+            <p class="text-sm text-gray-500 mt-2">
+                Academic year 2026
+            </p>
+
+        </div>
+
+
+        <!-- Attendance -->
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+
+            <p class="text-sm text-gray-500">
+                Today's Attendance
+            </p>
+
+            <h2 class="text-3xl font-bold mt-2">
+                94%
+            </h2>
+
+            <p class="text-sm text-green-600 mt-2">
+                Excellent attendance
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Recent Students -->
+
+    <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200">
+
+        <div class="p-6 border-b border-gray-200">
+
+            <h2 class="text-xl font-semibold">
+                Recent Students
+            </h2>
+
+        </div>
+
+
+        <div class="overflow-x-auto">
+
+            <table class="w-full">
+
+                <thead class="bg-gray-50">
+
+                    <tr>
+
+                        <th class="text-left px-6 py-4 text-sm font-semibold">
+                            Student
+                        </th>
+
+                        <th class="text-left px-6 py-4 text-sm font-semibold">
+                            Class
+                        </th>
+
+                        <th class="text-left px-6 py-4 text-sm font-semibold">
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr class="border-t">
+
+                        <td class="px-6 py-4">
+                            Dipak Rai
+                        </td>
+
+                        <td class="px-6 py-4">
+                            Class 10
+                        </td>
+
+                        <td class="px-6 py-4">
+
+                            <span class="px-3 py-1 text-sm rounded-full bg-green-100 text-green-700">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="border-t">
+
+                        <td class="px-6 py-4">
+                            Suman Rai
+                        </td>
+
+                        <td class="px-6 py-4">
+                            Class 9
+                        </td>
+
+                        <td class="px-6 py-4">
+
+                            <span class="px-3 py-1 text-sm rounded-full bg-green-100 text-green-700">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock content %}
